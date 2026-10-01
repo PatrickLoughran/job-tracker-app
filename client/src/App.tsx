@@ -9,7 +9,7 @@ interface Job {
   salary: string;
 }
 
-const API_BASE_URL = 'https://animated-waddle-6977vjwx69qgfr75x-5000.app.github.dev';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://animated-waddle-6977vjwx69qgfr75x-5000.app.github.dev';
 const STATUSES: Job['status'][] = ['Wishlist', 'Applied', 'Interview', 'Offer', 'Rejected'];
 
 export default function App() {
