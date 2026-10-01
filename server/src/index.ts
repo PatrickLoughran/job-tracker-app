@@ -6,7 +6,8 @@ const app = express();
 const prisma = new PrismaClient();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({ origin: '*' }));
+
+app.use(cors()); // Allows request from any frontend origin (Vercel & Codespaces)
 app.use(express.json());
 
 // GET: Fetch all jobs
